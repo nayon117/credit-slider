@@ -32,7 +32,7 @@ const AutoTopUp: React.FC<Props> = () => {
   ];
 
   return (
-    <Box sx={{ padding: "20px" }}>
+    <Box sx={{ paddingTop: "20px", paddingBottom: "20px" }}>
       <Grid container spacing={2}>
         {/* Auto Top-up Switch */}
         <Grid item xs={12}>
@@ -59,8 +59,8 @@ const AutoTopUp: React.FC<Props> = () => {
               gutterBottom
             >
               Once the credit goes below the threshold value, credits can be
-              auto purchased. Setup auto top-up to enjoy <br /> uninterrupted
-              services. You can disable this anytime to stop auto top-up.
+              auto purchased. Setup auto top-up to enjoy uninterrupted services.
+              You can disable this anytime to stop auto top-up.
             </Typography>
           </Box>
         </Grid>
@@ -105,14 +105,13 @@ const AutoTopUp: React.FC<Props> = () => {
                   >
                     Once the credit goes below a minimum threshold
                     <span style={{ color: "#9747FF", fontWeight: "bold" }}>
-                      {" "}
                       50
                     </span>
                     , we will auto-purchase
                     <span style={{ color: "#9747FF", fontWeight: "bold" }}>
-                      1200
+                      &nbsp;1200&nbsp;
                     </span>
-                    credits and add them to <br /> your account.{" "}
+                    credits and add them to your account.
                     <span
                       style={{
                         fontWeight: "bold",
@@ -137,8 +136,12 @@ const AutoTopUp: React.FC<Props> = () => {
                             direction="column"
                             alignItems="center"
                           >
-                            <Grid item>{mark.label}</Grid>
-                            <Grid item>{mark.credit}</Grid>
+                            <Grid style={{ fontWeight: "bold" }} item>
+                              {mark.label}
+                            </Grid>
+                            <Grid style={{ color: "#7B7B7B" }} item>
+                              {mark.credit}
+                            </Grid>
                           </Grid>
                         </>
                       ),

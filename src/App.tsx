@@ -1,13 +1,13 @@
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import AutoTopUp from "./components/AutoTopUp";
 
 function App() {
   return (
-    <Container maxWidth="xl" sx={{ backgroundColor: "#efefef",minHeight: "96vh" }}>
-      <Container maxWidth="lg">
+    <Box  sx={{ backgroundColor: "#efefef",minHeight: "90vh" }}>
+      <Container maxWidth="md">
       <AutoTopUp />
        </Container>
-    </Container>
+    </Box>
   );
 }
 
